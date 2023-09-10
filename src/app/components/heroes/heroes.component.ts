@@ -21,7 +21,7 @@ export class HeroesComponent {
 
   // Previously we retrieved heroes data directly from HEROES
   getHeroes(): void {
-    this.heroes = this.heroService.getHeroes();
+    this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
   }
 
   onSelect(hero: Hero): void {
