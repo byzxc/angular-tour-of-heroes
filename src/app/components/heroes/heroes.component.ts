@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { Hero } from "./hero";
 import { HeroService } from "../../services/heroes/hero.service";
 import { MessageService } from "../../services/message/message.service";
@@ -10,7 +10,7 @@ import { MessageService } from "../../services/message/message.service";
 })
 
 // Always export the component, so it can be used somewhere, e.g. routes and module
-export class HeroesComponent {
+export class HeroesComponent implements OnInit {
   heroes: Hero[] = [];
   selectedHero?: Hero;
 
